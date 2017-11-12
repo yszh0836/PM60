@@ -1,0 +1,24 @@
+当需要改变串口通信参数时，只需要:
+1：init赋值参数：
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 9600;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+
+2：调用UART_SetConfig(UART_HandleTypeDef *huart)；
+
+3：需要检查下usart3是否作为MODBSU.
+   另外，调用的 uart和usart区别，到底用哪个函数？
+
+4：TIM6作为modbus，tim7基本定时器
+   tim2/4触发ADC
+	用作modbus的定时器和串口号，用define定义一次。
+
+5：已经移植了freertos armfly的emwin 按键 LED 均测试ok，串口1的printf测试ok
+   移植的armfly的modbus有待测试。测试完毕后移植ADC采样，以及计算。
+
+6：

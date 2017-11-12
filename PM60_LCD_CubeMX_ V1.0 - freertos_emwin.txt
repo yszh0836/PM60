@@ -1,0 +1,6 @@
+通过对比，确定了这个版本是最新的基础上稍微更改后修复了LED1快闪停滞的问题。
+因此需要通过PM60_LCD_CubeMX_ V1.0 - freertos_emwin - 副本 (3)对比，确定位置。
+PM60_LCD_CubeMX_ V1.0 - freertos_emwin - 副本 (3)：最新但是LED1快闪有问题；
+PM60_LCD_CubeMX_ V1.0 - freertos_emwin - 副本 (4)：副本 (3)基础上修改了一些地方，现在在不快闪停滞。
+
+PM60_LCD_CubeMX_ V1.0 - freertos_emwin：副本 (4)基础上往回变化，找到原因，最新版本。
